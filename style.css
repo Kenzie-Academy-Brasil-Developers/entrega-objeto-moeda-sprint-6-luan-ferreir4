@@ -1,0 +1,33 @@
+body{
+    background-color: #cccfcf;
+}
+.mainStyle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainStyle__strDiv{
+    max-width: 400px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mainStyle__strDiv > p{
+    margin: 0 5px;
+}
+.mainStyle__strDiv > p::after{
+    content: ',';
+}
+
+.mainStyle__imgsDiv{
+    max-width: 1000px;
+    margin: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mainStyle__imgsDiv > img{
+    margin: 4px;
+}

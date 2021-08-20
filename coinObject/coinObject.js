@@ -1,9 +1,12 @@
 const mainContent = document.createElement('main');
 document.body.appendChild(mainContent);
+mainContent.classList.add('mainStyle')
 const strDiv = document.createElement('div');
+strDiv.classList.add('mainStyle__strDiv')
 mainContent.appendChild(strDiv);
 
 const imgsDiv = document.createElement('imgsDiv');
+imgsDiv.classList.add('mainStyle__imgsDiv')
 mainContent.appendChild(imgsDiv);
 
 const coin = {
