@@ -1,3 +1,11 @@
+const mainContent = document.createElement('main');
+document.body.appendChild(mainContent);
+const strDiv = document.createElement('div');
+mainContent.appendChild(strDiv);
+
+const imgsDiv = document.createElement('imgsDiv');
+mainContent.appendChild(imgsDiv);
+
 const coin = {
     state: 0,
   
@@ -32,20 +40,21 @@ const coin = {
 }
 
 const display20Flips = () => {
-  const arrDiv = document.getElementById('arrDiv')
   const resultsArr = [];
 
   for(let trow = 0; trow < 20; trow++){
-    let result = coin.flip();
+    let side = document.createElement('p')
+    let result = coin.toString();
     resultsArr.push(result);
-  }
-  arrDiv.innerText = JSON.stringify(resultsArr);
 
+    side.append(result);
+    strDiv.appendChild(side);
+  }
+  
   return resultsArr;
 }
 
 const display20images = () => {
-  const imgsDiv = document.getElementById('imgsDiv');
   const resultsArr = [];
 
   for(let trow = 0; trow < 20; trow++){
