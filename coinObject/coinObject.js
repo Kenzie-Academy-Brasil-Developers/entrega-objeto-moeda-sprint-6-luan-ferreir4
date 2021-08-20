@@ -2,21 +2,29 @@ const coin = {
     state: 0,
   
     flip: function () {
-      // Use "this.state" para acessar a propriedade "state".
-      // Configure de forma randômica a propriedade “state” do
-      // seu objeto moeda. "STATE" deve receber somente os valores 0 ou 1.
+        this.state = Math.floor(Math.random() * 2);
+        return this.state;
     },
   
     toString: function () {
       // Se o valor de "state" for 0, retorne "Heads"
       // Se o valor de "state" for 1, retorne "Tails"
+      if(this.flip() === 0){
+          return "Heads"
+      }
+      return "Tails"
     },
   
     toHTML: function () {
       const image = document.createElement("img");
       // Colocar uma imagem correspondente a essa valor.
-      // image.src = "./CAMINHO/IMAGEM.JPEG"
-      // image.alt = "Heads/Tails"
+      if(this.toString() === 'Heads'){
+        image.src = "./imgs/d-pedroII-head.png"
+        image.alt = "Heads"
+      }
+      image.src = "./imgs/d-pedroII-tail.png"
+        image.alt = "Tails"
+      
       return image;
     },
   };
